@@ -1,0 +1,367 @@
+/*sur les ecrans quand la largeur de la fenêtre fait au max 767 px*/
+@media screen and (min-width:300px) and ( max-width:767px) 
+{
+    *
+    {
+        font-family: 'Raleway', sans-serif;
+        box-sizing: border-box;
+    }
+    /* PROPRIETES DE LA PAGE ENTIERE*/
+    #blocpage
+    {
+        width:100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    header
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    /* POUR TOUS LES P */
+    p
+    {
+        font-size: 22px;
+        padding-left: 20px;
+    }
+    h2
+    {
+        font-size: 26px;
+    }
+    h3
+    {
+        font-size: 25px;
+        padding-top:15px;
+        padding-bottom: 15px;
+        padding-left:20px;
+    }
+    h4
+    {
+        font-size: 22px;
+    }
+    /* BARRE DE NAVIGATION AVEC DES LIENS ET LOGO */     
+    .nav_bar
+    {
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        padding:0;
+        margin-top: 15px;
+    }
+    #logo img
+    {
+        padding-left: 30px;
+    }
+    /*ul class menu*/
+    .nav_bar ul
+    {
+        width:100%;
+        margin:0;
+        padding:0;
+    }
+    .nav_bar ul li
+    {
+        flex-direction: row;
+        justify-content: space-around;
+        width:50%;
+        padding:20px 0 10px 0;
+        text-align: center;
+    }
+    .nav_bar ul li a 
+    {
+        font-size: 18px;
+        padding:0;
+    }
+    /* effet hover pour les liens de nav_bar en version mobile*/
+    .nav_bar li:hover
+    {
+        border-bottom: 3px solid #0065FC;
+        font-weight: bold;
+    }
+    .nav_bar li a:hover
+    {
+        border-top: 0px;
+    }
+    header h1, header p 
+    {
+    padding-right: 15px;
+    padding-left: 15px;
+    }
+    header h1   
+    {
+        font-size: 24px;
+    }
+    header p
+    {
+        font-size: 23px;
+    }
+    /* UNE BARRE DE RECHERCHE VERSION MOBILE- CENTRE*/
+    .research
+    {
+        width:90%;
+        height:65px;
+        margin-bottom: 20px;
+        margin-left: 5%; /*pour centrer la barre*/
+    }
+    /* ICONE GRISE DE LOCALISATION AVANT LE CHAMPS DE RECHERCHE*/
+    .fa-map-marker-alt
+    {
+        width:65px;
+        min-width:65px;
+        line-height: 65px;
+        height: 65px;
+        font-size: 22px;
+        left:5px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border: 3px;
+    }
+    /* LE CHAMP DE RECHERCHE */
+    input#search
+    {
+    width:62%;
+    line-height: 61px;
+    left: 70px;
+    font-size: 20px;
+    padding-right: 10px; /*pour compenser le depassement visuel sur le bouton*/
+    }
+    /* BOUTON BLEU FONCE DE BARRE DE RECHERCHE*/
+    #btn
+    {
+        left: calc(59px + 62%); /*(70px-11px) pour que l'input area depasse en peu*/
+        width: 65px;
+        height: 65px;
+        font-size: 22px;
+        border-radius: 20px;
+    }
+    /*bouton version desktop Off*/
+    .text_research
+    {
+        display:none;
+    }
+    /* bouton version mobile*/
+    .loupe /*.fa.fa-search*/
+    {
+        display:inherit;
+        color:white;
+        font-weight: bold;
+    }
+    /* LES FILTRES DE RECHERCHE */
+    .container_filtres
+    {   width:95%;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin:0 auto;
+    }
+    #titre_f 
+    {
+        width:95%;
+        padding:0 0 10px 0;
+    }
+    #titre_f p
+    {
+        font-size: 21px;
+    }
+    /* DIV AVEC 4 BOUTONS FILTRES*/
+    .filters
+    {
+        width: 90%;
+        flex-direction: row;
+        justify-content:flex-start;
+    }  
+    .bouton_filtre
+    {
+        font-size: 24px;
+        margin-right: 30px;
+        margin-bottom: 30px;
+        border-radius: 30px;
+    }
+    .texte_filtres
+    {
+        height: 50px;
+        padding-right: 30px;
+        padding-left: 30px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    /* LES ICONES POUR LES BOUTONS DE FILTRES */
+    .bouton_filtre .fas
+    {
+        width: 50px;
+        height: 50px;
+        margin-right: -17px;
+    }
+    /* 1 SECTION AVEC 2 GRANDS CONTAINEURS GRIS*/
+    #sec1
+    {
+        display:flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        width:100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .afficher_plus
+    {
+        font-size: 20px;
+        margin:0 auto;
+        padding:0;
+        align-self: flex-start;
+    }
+    .cubeleft
+    {
+        background-color: inherit;
+    }
+    .cubeleft, .cuberight 
+    {
+        width:100%;
+        border-radius: 0;
+        padding: 10px 0 10px 0;
+        margin-bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .lpp
+    {
+        margin:0;
+    }
+    /* contient 6 autres div-cartes cliquables */
+    #hebergements
+    {
+        flex-direction: column;
+        align-items: center;
+        background-color: inherit;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .cubeleft .bloc_heberge
+    {
+        width:95%;
+    }
+    .image
+    {
+        height: 235px; 
+    }
+    .bloc_heberge figcaption 
+    {
+        height: 120px;
+    }
+/* Carte cliquable avec l'image et les descriptifs, texte */
+    .cuberight .bloc_pop
+    {
+        flex-direction: column;
+        width:95%;
+        margin: 10px 0 10px 0;
+    }
+    .image_pop
+    {
+        height: 235px;
+    }
+    .bloc_pop figcaption
+    {
+        width:60%;
+    }
+    .stars
+    {
+        font-size: 18px;
+        width: 100%;
+        padding-left: 15px;
+        padding-bottom:5px;
+    }
+    /* SECTION 2 */
+    #sec2
+    {
+        width: 95%;
+        margin: 0 auto;
+        padding-bottom: 0px;
+    }
+    /* CONTIENT 4 RECTANGLES AVEC DES CARTES*/ 
+    #activites 
+    {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .rectangle
+    {
+        width:100%;
+        justify-content: space-around;
+    }
+    .act_gr, .act_petit  /*grandes et petites cartes*/
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        margin-bottom: 30px;
+    }
+    .image_act, .image_s_act /*les images des cartes*/
+    {
+    width: 100%;
+    height: 235px;
+    }
+    /* LA PARTIE FOOTER */
+    footer
+    {
+        width:100%;
+        flex-direction: column;
+        align-items: flex-start;
+        padding:20px; 
+    }
+    footer ul li
+    {
+        font-size: 20px;
+    }
+    .aboutus, .locations, .help /*sections de footer*/
+    {
+        width:100%;
+        margin-right: 0px;
+    }
+}
+
+/*   ADAPTATION AUX PETITS ECRANS   */
+@media all and (max-width:450px)
+{
+    /* UNE BARRE DE RECHERCHE VERSION MOBILE- CENTRE*/
+    .research
+    {
+        margin-left: 0;
+    }
+    /*adaptation des images aux petits ecrans*/
+    .bloc_pop
+    {
+        width:90%;
+    }
+    .bloc_pop figure
+    {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .bloc_pop figcaption
+    {
+        width:100%;
+        height:150px;
+        margin-left: 0;
+    }
+    .image_pop 
+    {
+        border-radius: 20px 20px 0 0;
+        width:100%;
+    }
+    .bloc_heberge figcaption 
+    {
+        height: 150px;
+    }
+    .image_act, .image_s_act, .image, .image_pop 
+    {
+        height: 150px; 
+    }
+}
+
+
+

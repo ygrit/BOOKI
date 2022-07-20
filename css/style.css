@@ -1,0 +1,649 @@
+/*@media screen and (min-width: 992px)*/
+/* Police personnalisée*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap');
+
+*
+{
+    font-family: 'Raleway', sans-serif;
+    margin-left:0;
+    margin-right: 0;
+    box-sizing: border-box;
+}
+/* PROPRIETES DE LA PAGE ENTIERE */
+#blocpage
+{
+    font-family: 'Raleway', sans-serif;
+    width: 95%;
+    margin: 0 auto;
+}
+/* HEADER */
+header
+{
+    width: 100%;
+}
+header h1
+{
+    font-size: 24px;
+    padding:0 10px 0 10px;
+}
+/* POUR TOUS LES P */
+p
+{
+    color: gray;
+    font-size: 14px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    margin:0;
+}
+h2 /*les titres de div*/
+{
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+h3 /*les titres des cartes*/
+{
+    font-size: 16px;
+    padding-top: 5px;
+}
+h2, h3
+{
+    padding-left: 5px;
+    margin:0;
+}
+h4 /* les titres de Footer*/
+{
+    font-size: 20px;
+    padding-bottom: 0px;
+    padding-left: 35px;
+}
+/* BARRE DE NAVIGATION AVEC DES LIENS ET LOGO */
+.nav_bar
+{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px 50px 20px;
+}
+.nav_bar ul
+{
+    display:flex;
+    list-style-type: none;
+}
+.nav_bar ul li a 
+{
+    padding:30px;
+    font-size: 16px;
+    color:gray;
+}
+/* EFFET DE SURVOL POUR LES LIENS DE NAVIGATION*/
+.nav_bar li a:hover
+{
+    color:#0065FC;
+    border-top: 2px solid #0065FC;
+}
+/* LOGO */
+#logo
+{
+    width:190px;
+    height:50px;
+    display:flex;
+}
+#logo img
+{
+   object-fit: contain;
+}
+/* pour tous les liens de la page */
+a
+{
+    text-decoration: none;
+    color: black;
+    width:100%;
+}
+
+/* UNE BARRE DE RECHERCHE DANS NAV DE HEADER*/
+.research
+{
+    width: 95%;
+    height:45px;
+    margin: 10px 0 10px 0;
+    padding:0; 
+    display:inline-block;
+    text-align: center;
+    vertical-align: middle;
+    position:relative;
+}
+/* ICONE GRISE DE LOCALISATION AVANT LE CHAMPS DE RECHERCHE*/
+.fa-map-marker-alt
+{
+    width: 45px;
+    height: 45px;
+    position:absolute;
+    top:0;
+    left:1%; 
+    font-size: 17px; 
+    text-align: center;
+    line-height: 45px;
+    vertical-align: middle;
+    background-color:#F2F2F2;
+    border:1px solid #F2F2F2;
+    color:black;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin:0;
+}
+/* LE CHAMP DE RECHERCHE */
+input#search
+{
+   position:absolute;
+   top:0;
+   margin:0px;
+   padding-left:8px;
+   border: 0.5px solid #F2F2F2;
+   color: black;
+   background-color:#ffff;
+   font-weight: bold;
+   width:20%;
+   line-height:42px;
+   left: calc(45px + 1%);
+   font-size: 18px;
+}
+input#search:focus
+{
+    outline: 0;
+}
+/* BOUTON BLEU FONCE DE LA BARRE DE RECHERCHE*/
+#btn
+{
+    top:0;
+    left: calc(45px + 21%); 
+    width: 120px;
+    height: 45px;
+    font-size: 18px;
+    cursor: pointer;
+    position:absolute;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#0065FC;
+    color: white;
+    border: 2px solid #0065FC;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding:0;
+    margin:0;
+}
+/*BOUTON UNIQUEMENT POUR LA VERSION DESKTOP */
+.text_research
+{
+    font-family: 'Raleway';
+    font-size: 19px;
+    font-weight: bold;
+}
+/*ICONE DE RECHERCHE POUR LA VERSION MOBILE*/
+.loupe
+{
+    display:none;
+}
+/* EFFET DE SURVOL POUR LE BOUTON DE RECHERCHE*/
+#btn:hover
+{
+    background-color: #DEEBFF;
+    color: #0065FC;
+    border:2px solid #0065FC;
+}
+/* LES FILTRES DE RECHERCHE */
+.container_filtres
+{
+    width:95%;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+#titre_f /* TITRE */
+{
+    display:flex;
+    width:7%;
+    padding-left: 0.5%;
+}
+#titre_f p
+{
+    font-size: 18px;
+    color:black;
+    font-weight: bold;
+}
+/* DIV AVEC 4 BOUTONS FILTRES*/
+.filters
+{
+    width: 80%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    color:black;
+}
+.bouton_filtre /* BOUTON QUI ENGLOBE L'ICONE ET LE NOM */
+{
+    width: auto;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid transparent;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    transform: scale(1);
+    transition-duration: 0.2s;
+}
+/* EFFET DE SURVOL POUR LE BOUTON FILTRE */
+.bouton_filtre:hover
+{
+	background: #eef4fd;
+	color: #0065FC;
+    transform: scale(1.02);
+}
+/* TEXTE SUR LES BOUTONS DE FILTRES */
+.texte_filtres
+{
+    border-top: 2px solid #F2F2F2;
+    border-right: 2px solid #F2F2F2;
+    border-bottom: 2px solid #F2F2F2;
+    width:fit-content;
+    height: 39px;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 0 25px 25px 0;
+    padding-left:25px;
+    padding-right: 15px;
+}
+/* LES ICONES POUR LES BOUTONS DE FILTRES */
+.bouton_filtre .fas
+{
+    width: 40px;
+    height: 40px;
+    /*pour centrer le contenu de l'icone*/
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color: #0065FC;
+    border: 2px solid #DEEBFF;
+    background-color: #DEEBFF;
+    border-radius: 100%;
+    margin-right: -15px;
+}
+/* EFFET DE SURVOL POUR LES ICONES*/
+.bouton_filtre .fas:hover
+{
+	background: white;
+	color: #0065FC;
+}
+/* INFO et ICONE SOUS LES FILTRES*/
+.info
+{
+    display:flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+.picone
+{
+    width: 20px;
+    height: 20px;
+    border: 2px solid #F2F2F2;
+    border-radius: 100%;
+    color:#0065FC;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin:5px;
+}
+/* 1 SECTION AVEC 2 GRANDS CONTAINEURS GRIS*/
+#sec1
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:0;
+    margin: 0 auto;
+}
+/* CONTAINEUR GRIS A GAUCHE ~ 2/3 - HEBERGEMENTS*/
+.cubeleft 
+{
+    width:65%;
+    background-color: #F2F2F2;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin:0 auto;
+    padding: 30px;
+}
+/*les titres de section #sec1 en h2*/
+.hm /* pour les Hébérgements*/
+{
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start;
+    padding-left: 15px;
+}
+.lpp /*pour les plus populaires*/
+{
+    display:flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 10px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+/* DIV QUI CONTIENT 6 CARTES CLIQUABLES */
+#hebergements 
+{
+    width:100%;
+    background-color: #F2F2F2;
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+/* LA CARTE HEBERGEMENTS*/
+.bloc_heberge 
+{
+    display: flex;
+    flex-direction:column;
+    width:30%;
+    height: auto;
+    background-color: #ffff;
+    border:5px solid white;
+    border-radius: 20px;
+    box-shadow: 0 5px 5px gray;
+    margin-top:20px;
+    margin-bottom: 20px;
+    padding:0 0 5px 0;
+    transform: scale(1); 
+    transition-duration: 0.2s;
+}
+.bloc_heberge:hover 
+{
+transform: scale(1.01);
+}
+.bloc_heberge figure
+{
+    width: 100%;
+    margin:0;
+    padding:0;
+}
+.bloc_heberge figcaption
+{
+    width: 100%;
+    height: 100px; 
+    line-height: 150%;
+    margin:0;
+}
+/* les images de section Hébérgements */
+.image
+{
+   border-top-left-radius: 20px;
+   border-top-right-radius: 20px;
+   width: 100%;
+   height:112px;
+   object-fit: cover;
+   overflow:hidden;
+}
+/* RATING - ETOILES */
+.stars
+{
+    padding-top: 5px;
+    position: absolute;
+    left:5px;
+    bottom: 0px;
+}
+.fa.fa-star 
+{
+    color: gray;
+}
+.fa.fa-star.checked
+{
+    color:#0065FC;
+}
+/*positionnement de Stars pr rapport au contenu des blocs*/
+figcaption
+{
+    position: relative;
+}
+.afficher_plus 
+{
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+	margin-left: 20px;
+    padding-left: 15px;
+    display: flex;
+}
+.afficher_plus:hover
+{
+	cursor: pointer;
+    text-decoration: underline;
+}
+/* CONTAINEUR GRIS A DROITE =1/3 */
+.cuberight    
+{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width:30%;
+    background-color: #F2F2F2;
+    border-radius: 25px;
+    margin:0 auto;
+    padding: 30px 0;
+}
+/* ENCLOBE 3 DIV-CARTES CLIQUABLES POPULAIRES*/
+#populaires 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width:100%;
+    background-color: #F2F2F2;
+}
+/* LA CARTE CLIQUABLE */
+.bloc_pop  
+{
+    display: flex;
+    flex-direction:row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width:85%;
+    height:auto; 
+    background-color: #ffff;
+    border:5px solid white;
+    border-radius: 20px;
+    box-shadow: 0 5px 5px gray;
+    margin-top:20px;
+    margin-bottom: 25px;
+    padding:0;
+    transform: scale(1); 
+    transition-duration: 0.2s;
+}
+.bloc_pop:hover  
+{
+    transform: scale(1.01);
+}
+.bloc_pop figure 
+{
+    display: flex;
+	flex-direction: row;
+    justify-content:flex-start;
+    width:100%;
+    margin: 0 auto;
+}
+.bloc_pop figcaption
+{
+    width: 60%;
+    padding: 0 0 5px 5px; 
+    line-height: 150%;
+}
+/* Les images pour les cartes */
+.image_pop
+{
+   height:140px;
+   width: 40%;
+   border-bottom-left-radius: 20px;
+   border-top-left-radius: 20px;
+   object-fit: cover;
+   overflow:hidden;
+}
+/* SECTION 2 - Activités à Marseille */
+#sec2 
+{
+    width:100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+}
+/* Titre de section Activité */
+.aam
+{
+    padding-left: 25px;
+    margin-bottom: 20px;
+}
+/* DIV QUI CONTIENT 4 RECTANGLES AVEC DES CARTES*/ 
+#activites 
+{
+    width: 100%;
+    margin:0;
+    padding:0;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: space-between;
+    flex-wrap: wrap;
+}
+.rectangle
+{
+    width:20%;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content:space-between;
+    margin:0 auto;
+    padding:0;
+}
+/* lES GRANDES CARTES */
+.act_gr
+{
+    width: 100%;
+    height:auto;
+    border-radius: 20px;
+    box-shadow: 0 3px 3px gray;
+    margin:0;
+    transform: scale(1); 
+    transition-duration: 0.2s;
+}
+.act_gr:hover
+{
+    transform: scale(1.01);
+}
+/* lES PETITES CARTES */
+.act_petit
+{
+    width:100%;
+    height:auto;
+    border-radius: 20px;
+    box-shadow: 0 3px 3px gray;
+    transform: scale(1); /*pour l'effet de survol*/
+    transition-duration: 0.2s;
+}
+.act_petit:hover
+{
+    transform: scale(1.01);
+}
+.act_gr figure, .act_petit figure
+{
+    width: 100%;
+    margin:0;
+    padding:0;
+}
+.act_gr figure figcaption, .act_petit figure figcaption
+{
+    padding: 10px 0 5px 10px;
+    line-height: 150%;
+}
+/* Les images pour les grandes cartes- section Activité */
+.image_act
+{
+   width: 100%;
+   height:330px;
+   border-top-left-radius: 20px;
+   border-top-right-radius: 20px;
+   object-fit: cover;
+   overflow: hidden;
+   margin:0;
+}
+/* Les images pour les pétites cartes- section Activité */
+.image_s_act
+{
+   width: 100%;
+   height: 125px;
+   border-top-left-radius: 20px;
+   border-top-right-radius: 20px;
+   object-fit:cover;
+   overflow: hidden;
+   margin:0;
+}
+/* LA PARTIE FOOTER */
+footer
+{
+    width:95%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: 'Raleway', sans-serif;
+    background-color: #F2F2F2;
+    padding:20px 0px 20px 0px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+footer ul
+{
+    list-style-type: none;
+}
+footer ul li
+{
+    border:none;
+    font-size: 18px;
+    margin:0;
+    padding-bottom: 20px;
+    line-height: 150%;
+}
+/* LES 3 DIV DE FOOTER */  
+.aboutus, .locations, .help 
+{
+    width:30%;
+    display:flex;
+    flex-direction: column;
+    margin:0;
+}
+/* EFFET DE SURVOL POUR FOOTER */
+footer ul li:hover
+{
+    color: blue;
+    cursor: pointer;
+	text-decoration: underline;
+}

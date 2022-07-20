@@ -1,0 +1,274 @@
+/* POUR LES TABLETTES MAX WIDTH 991PX */
+@media screen and (min-width: 768px) and (max-width: 991px){
+    *
+    {
+        font-family: 'Raleway', sans-serif;
+        box-sizing: border-box;
+    }
+    header
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #logo img
+    {
+        padding-left: 30px;
+    }
+    /* POUR TOUS LES P */
+    p
+    {
+        font-size: 20px;
+    }
+    h2
+    {
+        font-size: 24px;
+    }
+    h3
+    {
+        font-size: 21px;
+    }
+    h4
+    {
+        font-size: 22px;
+    }
+    p, h2, h3
+    {
+        padding-left:20px;
+    }
+    /* BARRE DE NAVIGATION AVEC DES LIENS ET LOGO */
+    .nav_bar
+    {
+        width:90%;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        padding-bottom: 15px;
+        margin-bottom: 20px;
+    }
+    .nav_bar ul 
+    {
+        width:100%;
+        margin:0;
+        padding:0;
+    }
+    /*ul class menu*/
+    .nav_bar .menu
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .nav_bar ul li a 
+    {
+        font-size: 22px;
+        padding:15px;
+    }       
+        /* EFFET DE SURVOL POUR LES LIENS DE NAVIGATION*/
+    .nav_bar li a:hover
+    {
+        border-bottom: 3px solid #0065FC;
+        border-top: 0px;
+    }
+    header h1
+    {
+        font-size: 24px;
+    }
+    header p
+    {
+        font-size: 22px;
+    }
+    nav
+    {
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    /* UNE BARRE DE RECHERCHE VERSION TABLETTE- CENTRE*/
+    .research
+    {
+        width: 90%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    /* ICONE GRISE DE LOCALISATION AVANT LE CHAMPS DE RECHERCHE*/
+    .fa-map-marker-alt 
+    {
+        font-size: 20px;
+        width:45px;
+    }
+    /* LE CHAMP DE RECHERCHE */
+    input#search
+    {
+    font-size: 24px;
+    width: 75%;
+    padding-left: 3px;
+    }
+    /* BOUTON BLEU FONCE DE BARRE DE RECHERCHE VERSION MOBILE*/
+    #btn
+    {
+        left: calc(40px + 75%); /*(45px-5px) pour un léger dépassement*/
+        width: 50px;
+        height: 45px;
+        border-radius: 10px;
+        font-size: 20px;
+    }
+    /* bouton version desktop désactivé */
+    .text_research
+    {
+        display:none;
+    }
+    /* bouton version mobile*/
+    .loupe /*.fa.fa-search*/
+    {
+        display:inherit;
+        color:white;
+        font-weight: bold;
+    }
+    /* LES FILTRES DE RECHERCHE */
+    .container_filtres
+    {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    #titre_f
+    {
+        width:10%
+    }
+    #titre_f p
+    {
+        font-size: 22px;
+        padding:0;
+    }
+    /* DIV AVEC 4 BOUTONS FILTRES*/
+    .filters
+    {
+        width: 100%;
+        display: flex;
+        justify-content:space-around;
+        flex-wrap: wrap;
+    }
+    /* TEXTE SUR LES BOUTONS DE FILTRES */
+    .texte_filtres
+    {
+        font-size: 22px;
+    }
+    /* 1 SECTION AVEC 2 GRANDS CONTAINEURS GRIS*/
+    #sec1
+    {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        width:100%;
+        height:auto;
+    }
+    .cubeleft, .cuberight
+    {
+        width:95%;
+        border-radius: 20px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    /* contient 6 autres div-cartes cliquables */
+    #hebergements
+    {
+        flex-direction: row;
+        background-color: inherit;
+    }
+    .image
+    {
+        height:230px;
+    }
+    .cubeleft
+    {
+        background-color: #ffff;
+        padding:20px 0 20px 0;
+    }
+    .cubeleft .bloc_heberge
+    {
+        width:45%;
+        height:auto;
+    }
+    /* englobe 3 div-cartes cliquables avec des photos  */
+    #populaires
+    {
+        width:100%;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    #populaires p
+    {
+        padding-bottom: 0;
+        font-size: 17px;
+    }
+    /* Carte cliquable avec l'image et les descriptifs, texte */
+    .cuberight .bloc_pop
+    {
+        width:30%;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height:auto;
+        padding-right: 0;
+    }
+    .bloc_pop h3 
+    {
+        font-size: 18px;
+    }
+    .bloc_pop figure
+    {
+        margin-top: 0;
+        margin-bottom: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content:space-between;
+    }
+    .image_pop
+    {
+    height:150px;
+    width:100%;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 20px;
+    }
+    .bloc_pop figcaption
+    {
+        width: 100%;
+        height: 120px;
+        margin-left: 0px;
+        padding-left:0px;
+    }
+    .stars
+    {
+        padding-left: 15px;
+    }
+    #sec2
+    {
+    margin-top: 5px;
+    margin-bottom:5px;
+    } 
+    /*#activites contient 4 rectangles- cartes  avec les images, descriptifs, textes*/
+    .rectangle
+    {
+        width:46%;
+        margin-bottom: 20px;
+    }
+    /* LA PARTIE FOOTER */
+    footer
+    {
+        width:90%;
+        flex-direction: column;
+        margin-top: 15px;
+    }
+    footer ul li
+    {
+        font-family: 'Raleway', Arial, sans-serif;
+        font-size: 22px;
+    }
+    /* LES 3 DIV DE FOOTER */
+    .aboutus, .locations, .help
+    {
+        width:100%;
+        margin-right: 0px;
+    }
+}
